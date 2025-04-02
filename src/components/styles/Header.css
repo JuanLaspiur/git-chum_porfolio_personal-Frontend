@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.nav-menu {
+  background: none;
+  border: none;
+  width: max-content;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar {
+  width: 200px;
+}
+
+.dark-theme {
+  --bg-color: #161b22;
+  --border-color: #30363d;
+  color: white;
+}
+
+.light-theme {
+  --bg-color: white;
+  --border-color: #e1e4e8;
+  color: black;
+}

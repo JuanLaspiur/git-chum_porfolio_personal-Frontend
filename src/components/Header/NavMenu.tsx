@@ -5,7 +5,7 @@ import translations from "./headerTranslations.json";
 
 type NavMenuProps = {
   isDarkMode: boolean;
-  language: string;
+  language: 'es' | 'en';
 };
 
 const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, language }) => {

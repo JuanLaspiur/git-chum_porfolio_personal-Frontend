@@ -19,9 +19,18 @@
 }
 
 .nav-menu {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   background: none;
   border: none;
-  width: max-content;
+}
+
+.nav-menu .ant-menu-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Evita saltos de línea */
 }
 
 .header-right {

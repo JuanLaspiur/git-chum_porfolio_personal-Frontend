@@ -1,0 +1,22 @@
+.home-container {
+    display: flex;
+    flex-direction: row;
+}
+  
+@media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+    }
+  }
+
+  .dark-theme {
+    --bg-color: #161b22;
+    --border-color: #30363d;
+    color: white;
+  }
+  
+  .light-theme {
+    --bg-color: white;
+    --border-color: #e1e4e8;
+    color: black;
+  }

@@ -1,4 +1,29 @@
-.achievements {
+.avatar_section {
+    text-align: center;
+    padding: 20px 40px;
+    border-right: 1px solid #30363d;
+  }
+  
+  .avatar_section-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .follow-button {
+    background-color: #21262d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+
+
+  .achievements {
     margin-top: 35px;
     text-align: left;
     padding: 0 13px;
@@ -6,11 +31,11 @@
   }
   
   .achievements.dark::before {
-    background-color: #444; /* Gris en modo oscuro */
+    background-color: #444; 
   }
   
   .achievements.light::before {
-    background-color: #111; /* Negro en modo claro */
+    background-color: #111; 
   }
   
   .achievements::before {

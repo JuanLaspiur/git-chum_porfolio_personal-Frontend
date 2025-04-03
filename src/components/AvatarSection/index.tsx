@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"; 
-import translationsData from "./welcometranslations.json"; 
+import translationsData from "../homePage/Welcome/welcometranslations.json"; 
 import Achievements from "./Achievements";
+import '../styles/AvatarSection.css'
 
-interface ProfileProps {
+interface AvatarSectionProps {
     language: "es" | "en";
 }
 
-const Profile = ({ language }: ProfileProps) => {
+const AvatarSection = ({ language }: AvatarSectionProps) => {
   const [translations, setTranslations] = useState(translationsData[language] || translationsData["en"]);
 
   useEffect(() => {
@@ -14,8 +15,8 @@ const Profile = ({ language }: ProfileProps) => {
   }, [language]);
 
   return (
-    <div className="profile">
-      <img src="./Yo.webp" alt="Profile" className="profile-image" />
+    <div className="avatar_section">
+      <img src="./Yo.webp" alt="Avatar" className="avatar_section-image" />
       <h1>{translations.name}</h1>
       <h2>{translations.username}</h2>
       <p>{translations.job}</p>
@@ -25,5 +26,5 @@ const Profile = ({ language }: ProfileProps) => {
   );
 };
 
-export default Profile;
+export default AvatarSection;
 

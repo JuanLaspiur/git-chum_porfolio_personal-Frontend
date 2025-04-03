@@ -1,6 +1,4 @@
-import React from "react"; // 👈 Importa React
-import "./Achievements.css";
-import { useTheme } from "../../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const achievements = [
   { img: "/1.png", alt: "YOLO Badge" },

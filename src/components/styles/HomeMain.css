@@ -80,7 +80,25 @@
     color: #58a6ff;
     text-decoration: none;
   }
+  .readme-header {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .readme-file {
+    font-weight: bold;
+  }
+  .divider {
+    border: none;
+    height: 1px;
+    margin: 16px 0;
+  }
 
+  .dark-theme .divider {
+    background-color: #30363d;
+  }
+  .light-theme .divider {
+    background-color: #d0d7de;
+  }
   /* all */
   .dark-theme {
     background-color: #121212;

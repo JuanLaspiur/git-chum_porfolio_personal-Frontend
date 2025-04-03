@@ -1,4 +1,5 @@
 import { useTheme } from "../../../context/ThemeContext";
+import { filterProjectsByName } from "../../../helpers/filterProjects";
 import ProjectCard from "./ProjectCard";
 import RenderPreviewCard from "./RenderPreviewCard";
 
@@ -8,7 +9,7 @@ interface Project {
   language: string;
   stars: number;
   visibility: string;
-   previewImage: string;
+  previewImage: string;
 }
 
 const projects: Project[] = [
@@ -18,7 +19,7 @@ const projects: Project[] = [
     language: "Java",
     stars: 1,
     visibility: "Public",
-     previewImage: "https://concepto.de/wp-content/uploads/2015/06/como-hacer-un-proyecto-e1546818947329-800x400.jpg"
+    previewImage: "https://concepto.de/wp-content/uploads/2015/06/como-hacer-un-proyecto-e1546818947329-800x400.jpg"
   },
   {
     name: "pruebatecnica_backend",
@@ -27,7 +28,6 @@ const projects: Project[] = [
     stars: 1,
     visibility: "Public",
     previewImage: "https://via.placeholder.com/150"
-
   },
   {
     name: "pruebatecnica_frontend",
@@ -36,7 +36,6 @@ const projects: Project[] = [
     stars: 1,
     visibility: "Public",
     previewImage: "https://via.placeholder.com/150"
-
   },
   {
     name: "personal_webpage-frontend",
@@ -45,7 +44,6 @@ const projects: Project[] = [
     stars: 1,
     visibility: "Public",
     previewImage: "https://via.placeholder.com/150"
-
   },
   {
     name: "SinergiaCreativa-Frontend",
@@ -54,7 +52,6 @@ const projects: Project[] = [
     stars: 1,
     visibility: "Public",
     previewImage: "https://via.placeholder.com/150"
-
   },
   {
     name: "SinergiaCreativa-Backend",
@@ -63,17 +60,21 @@ const projects: Project[] = [
     stars: 1,
     visibility: "Public",
     previewImage: "https://via.placeholder.com/150"
-
   },
 ];
 
-const ProjectList: React.FC = () => {
+type ProjectListProps = {
+  query: string;
+};
+
+const ProjectList = ({ query }: ProjectListProps) => {
   const { isDarkMode } = useTheme();
+  const filteredProjects = filterProjectsByName(projects, query);
 
   return (
     <div className={`project-list ${isDarkMode ? "dark" : "light"}`}>
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} renderPreview={(project) => <RenderPreviewCard project={project} />}/>
+      {filteredProjects.map((project, index) => (
+        <ProjectCard key={index} project={project} renderPreview={(project) => <RenderPreviewCard project={project} />} />
       ))}
     </div>
   );

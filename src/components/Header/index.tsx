@@ -1,5 +1,5 @@
-import {  useTheme } from "../../context/ThemeContext";
-import {  useLanguage } from "../../context/LanguageContext";
+import { useTheme } from "../../context/ThemeContext";
+import { useLanguage } from "../../context/LanguageContext";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import translations from "./headerTranslations.json";
@@ -12,13 +12,12 @@ import { getMenuItems } from "./getNavItems";
 
 type HeaderProps = {
   isMobile?: boolean;
+  setQuery: (query: string) => void; 
 };
 
-const Header: React.FC = ({isMobile = false }:HeaderProps) => {
+function Header({ isMobile = false, setQuery }: HeaderProps) {
   const { isDarkMode } = useTheme();
   const { language } = useLanguage();
-
-
 
   return (
     <header className={`header ${isDarkMode ? "dark-theme" : "light-theme"}`}>
@@ -28,12 +27,13 @@ const Header: React.FC = ({isMobile = false }:HeaderProps) => {
           className="search-bar"
           placeholder={translations[language].search}
           prefix={<SearchOutlined />}
+          onChange={(e) => setQuery(e.target.value)}
         />
         <ThemeToggle />
-        <LanguageToggle  isMobile={isMobile}/>
-        </div>
+        <LanguageToggle isMobile={isMobile} />
+      </div>
     </header>
   );
-};
+}
 
 export default withResponsive(Header);

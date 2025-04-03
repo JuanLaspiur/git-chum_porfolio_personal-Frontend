@@ -5,20 +5,21 @@ import ContributionGraph from "./ContributionGraph";
 import ProjectList from "./ProyectList";
 import ReadmeSection from "./ReadmeSection";
 
-const Welcome = () => {
+type HomeMainProps = {
+  query: string;
+};
+
+const HomeMain = ({ query }: HomeMainProps) => {
   const { isDarkMode } = useTheme();
   const { language } = useLanguage();
 
   return (
-    <>
     <div className={`welcome-container ${isDarkMode ? "dark-theme" : "light-theme"}`}>
-      <ReadmeSection  language={language} />
-      <ProjectList/>
-      <ContributionGraph/>
+      <ReadmeSection language={language} />
+      <ProjectList query={query} /> {/* Aquí pasas query a ProjectList para filtrar */}
+      <ContributionGraph />
     </div>
-  
-    </>
   );
 };
 
-export default Welcome;
+export default HomeMain;

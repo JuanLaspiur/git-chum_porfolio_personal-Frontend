@@ -1,5 +1,6 @@
 import GitHubCalendar from "react-github-calendar";
 import { useTheme } from "../../context/ThemeContext";
+import { Logo } from "../ui/Logo";
 
 const ContributionGraph = () => {
   const { isDarkMode } = useTheme();
@@ -13,7 +14,7 @@ const ContributionGraph = () => {
 
   return (
     <div style={containerStyle}>
-      <h2 style={{ textAlign: "center", paddingBottom:"20px" }}>GitChum Contributions</h2>
+      <h2 style={{ textAlign: "center", paddingBottom:"20px" }}><Logo className="" isDarkMode={isDarkMode} text=""/> GitChum Contributions</h2>
       <GitHubCalendar
         username="JuanLaspiur"
         blockSize={12}

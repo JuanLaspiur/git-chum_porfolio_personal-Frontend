@@ -1,5 +1,20 @@
-export const Logo: React.FC<{ isDarkMode: boolean }> = ({ isDarkMode }) => (
-    <div className="logo">
-      <img src={`./${!isDarkMode ? "logo" : "logo_white"}.webp`} alt="logo" className="logo-icon" /> Git-Chum
+interface LogoProps {
+  isDarkMode: boolean;
+  text?: string;
+  className?: string;
+  logoSrc?: string;
+}
+
+export const Logo: React.FC<LogoProps> = ({
+  isDarkMode,
+  text = 'Git-Chum',
+  className = 'logo',
+  logoSrc,
+}) => {
+  const defaultLogo = `./${!isDarkMode ? 'logo' : 'logo_white'}.webp`;
+  return (
+    <div className={`${className}`}>
+      <img src={logoSrc || defaultLogo} alt="logo" className="logo-icon" /> {text}
     </div>
   );
+};

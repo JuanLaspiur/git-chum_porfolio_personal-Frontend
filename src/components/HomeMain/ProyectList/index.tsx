@@ -1,6 +1,15 @@
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "../../../context/ThemeContext";
+import ProjectCard from "./ProjectCard";
 
-const projects = [
+interface Project {
+  name: string;
+  description: string;
+  language: string;
+  stars: number;
+  visibility: string;
+}
+
+const projects: Project[] = [
   {
     name: "ClientesIonic-Full",
     description: "Gestión de Clientes, arq.Rest con Spring Boot y JPA (Hibernate). Npm minificado Ionic React.",
@@ -45,21 +54,13 @@ const projects = [
   },
 ];
 
-const ProjectList = () => {
+const ProjectList: React.FC = () => {
   const { isDarkMode } = useTheme();
 
   return (
     <div className={`project-list ${isDarkMode ? "dark" : "light"}`}>
       {projects.map((project, index) => (
-        <div key={index} className="project-card">
-          <h2 className="project-title">{project.name}</h2>
-          <p className="project-description">{project.description}</p>
-          <div className="project-info">
-            <span className="project-language">{project.language}</span>
-            <span className="project-stars">⭐ {project.stars}</span>
-            <span className="project-visibility">{project.visibility}</span>
-          </div>
-        </div>
+        <ProjectCard key={index} project={project} />
       ))}
     </div>
   );

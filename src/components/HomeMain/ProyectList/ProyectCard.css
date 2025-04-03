@@ -1,12 +1,4 @@
-  /* ProyectList*/
-  .project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    padding: 16px;
-  }
-  /*
-  .project-card {
+.project-card {
     padding: 16px;
     border-radius: 8px;
     border: 1px solid;
@@ -14,14 +6,14 @@
   
   }
   
-
+  /* Modo oscuro */
   .dark .project-card {
     background-color: #1e1e1e;
     color: white;
     border-color: #333;
   }
   
-
+  /* Modo claro */
   .light .project-card {
     background-color: #ffffff;
     color: black;
@@ -68,34 +60,4 @@
     background-color: #27ae60;
     color: white;
   }
-  */
-
-  /* ReadmeSection */
-  .info {
-    padding: 20px 40px;
-    flex: 1;
-  }
   
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-  }
-
-  /* all */
-  .dark-theme {
-    background-color: #121212;
-    color: white;
-  }
-  
-  .light-theme {
-    background-color: #ffffff;
-    color: black;
-  }
-  
-  @media (max-width: 768px) {
-    .welcome-container {
-      flex-direction: column;
-    }
-  }
-
- 

@@ -1,35 +1,36 @@
 {
-    "en": {
-      "name": "Juan Laspiur",
-      "username": "@JuanLaspiur",
-      "job": "FullStack Developer",
-      "follow": "Follow",
-      "personalPage": "Personal Page",
-      "skills": "Skills",
-      "languages": "Languages: JavaScript, Java",
-      "frameworks": "Frameworks: React, Node.js, Spring",
-      "databases": "Databases: MongoDB, MariaDB, MySQL, GraphQL",
-      "tools": "Tools: Git",
-      "contact": "Contact",
-      "email": "Email",
-      "instagram": "Instagram",
-      "linkedin": "LinkedIn"
-    },
-    "es": {
-      "name": "Juan Laspiur",
-      "username": "@JuanLaspiur",
-      "job": "Desarrollador FullStack",
-      "follow": "Seguir",
-      "personalPage": "Página Personal",
-      "skills": "Habilidades",
-      "languages": "Lenguajes: JavaScript, Java",
-      "frameworks": "Frameworks: React, Node.js, Spring",
-      "databases": "Bases de Datos: MongoDB, MariaDB, MySQL, GraphQL",
-      "tools": "Herramientas: Git",
-      "contact": "Contacto",
-      "email": "Correo Electrónico",
-      "instagram": "Instagram",
-      "linkedin": "LinkedIn"
-    }
+  "en": {
+    "name": "Juan Laspiur",
+    "username": "@JuanLaspiur",
+    "job": "FullStack Developer",
+    "follow": "Follow",
+    "personalPage": "Personal Page",
+    "skills": "Skills",
+    "languages": "Languages: JavaScript, Java",
+    "frameworks": "Frameworks: React, Node.js, Spring",
+    "databases": "Databases: MongoDB, MariaDB, MySQL, GraphQL",
+    "tools": "Tools: Git",
+    "devOps": "DevOps: Docker, SSH, NGINX", 
+    "contact": "Contact",
+    "email": "Email",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
+  },
+  "es": {
+    "name": "Juan Laspiur",
+    "username": "@JuanLaspiur",
+    "job": "Desarrollador FullStack",
+    "follow": "Seguir",
+    "personalPage": "Página Personal",
+    "skills": "Habilidades",
+    "languages": "Lenguajes: JavaScript, Java",
+    "frameworks": "Frameworks: React, Node.js, Spring",
+    "databases": "Bases de Datos: MongoDB, MariaDB, MySQL, GraphQL",
+    "tools": "Herramientas: Git",
+    "devOps":  "DevOps: Docker, SSH, NGINX",
+    "contact": "Contacto",
+    "email": "Correo Electrónico",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
   }
-  
+}

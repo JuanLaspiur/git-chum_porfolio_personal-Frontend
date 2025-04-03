@@ -1,5 +1,6 @@
 import { useTheme } from "../../../context/ThemeContext";
 import ProjectCard from "./ProjectCard";
+import RenderPreviewCard from "./RenderPreviewCard";
 
 interface Project {
   name: string;
@@ -7,6 +8,7 @@ interface Project {
   language: string;
   stars: number;
   visibility: string;
+   previewImage: string;
 }
 
 const projects: Project[] = [
@@ -16,6 +18,7 @@ const projects: Project[] = [
     language: "Java",
     stars: 1,
     visibility: "Public",
+     previewImage: "https://concepto.de/wp-content/uploads/2015/06/como-hacer-un-proyecto-e1546818947329-800x400.jpg"
   },
   {
     name: "pruebatecnica_backend",
@@ -23,6 +26,8 @@ const projects: Project[] = [
     language: "TypeScript",
     stars: 1,
     visibility: "Public",
+    previewImage: "https://via.placeholder.com/150"
+
   },
   {
     name: "pruebatecnica_frontend",
@@ -30,6 +35,8 @@ const projects: Project[] = [
     language: "TypeScript",
     stars: 1,
     visibility: "Public",
+    previewImage: "https://via.placeholder.com/150"
+
   },
   {
     name: "personal_webpage-frontend",
@@ -37,6 +44,8 @@ const projects: Project[] = [
     language: "TypeScript",
     stars: 1,
     visibility: "Public",
+    previewImage: "https://via.placeholder.com/150"
+
   },
   {
     name: "SinergiaCreativa-Frontend",
@@ -44,6 +53,8 @@ const projects: Project[] = [
     language: "TypeScript",
     stars: 1,
     visibility: "Public",
+    previewImage: "https://via.placeholder.com/150"
+
   },
   {
     name: "SinergiaCreativa-Backend",
@@ -51,6 +62,8 @@ const projects: Project[] = [
     language: "TypeScript",
     stars: 1,
     visibility: "Public",
+    previewImage: "https://via.placeholder.com/150"
+
   },
 ];
 
@@ -60,7 +73,7 @@ const ProjectList: React.FC = () => {
   return (
     <div className={`project-list ${isDarkMode ? "dark" : "light"}`}>
       {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
+        <ProjectCard key={index} project={project} renderPreview={(project) => <RenderPreviewCard project={project} />}/>
       ))}
     </div>
   );

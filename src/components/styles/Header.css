@@ -16,7 +16,16 @@
   font-size: 18px;
   font-weight: bold;
   margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
 }
+
+.logo-icon {
+  width: 24px; 
+  height: auto;
+}
+
 
 .nav-menu {
   display: flex !important;
@@ -30,7 +39,7 @@
 .nav-menu .ant-menu-item {
   display: flex;
   align-items: center;
-  white-space: nowrap; /* Evita saltos de línea */
+  white-space: nowrap;
 }
 
 .header-right {
@@ -41,7 +50,7 @@
 
 .search-bar {
   width: 200px;
-}
+} 
 
 .dark-theme {
   --bg-color: #161b22;
@@ -53,4 +62,11 @@
   --bg-color: white;
   --border-color: #e1e4e8;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    max-width: 40px;
+    font-size: 14px;
+  }
 }

@@ -3,11 +3,15 @@ import { LanguageContext } from "../context/LanguageContext";
 import { Button } from "antd";
 
 const translations = {
-  es: { lang: "🇪🇸 Español" },
-  en: { lang: "🇬🇧 English" },
+  es: { lang: "🇪🇸 Español", short: "Es" },
+  en: { lang: "🇬🇧 English", short: "En" },
 };
 
-const LanguageSwitcher: React.FC = () => {
+interface LanguageSwitcherProps {
+  isMobile: boolean;
+}
+
+const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ isMobile }) => {
   const languageContext = useContext(LanguageContext);
 
   if (!languageContext) {
@@ -16,7 +20,11 @@ const LanguageSwitcher: React.FC = () => {
 
   const { language, changeLanguage } = languageContext;
 
-  return <Button onClick={changeLanguage}>{translations[language].lang}</Button>;
+  return (
+    <Button onClick={changeLanguage}>
+      {isMobile ? translations[language].short : translations[language].lang}
+    </Button>
+  );
 };
 
 export default LanguageSwitcher;

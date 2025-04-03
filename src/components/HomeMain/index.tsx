@@ -1,6 +1,6 @@
-import { useLanguage } from "../../../context/LanguageContext";
-import { useTheme } from "../../../context/ThemeContext";
-import "../../styles/Welcome.css";
+import { useLanguage } from "../../context/LanguageContext";
+import { useTheme } from "../../context/ThemeContext";
+import "../styles/HomeMain.css";
 import ContributionGraph from "./ContributionGraph";
 import ProjectList from "./ProjectList";
 import ReadmeSection from "./ReadmeSection";

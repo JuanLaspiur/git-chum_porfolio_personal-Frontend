@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import translationsData from "./welcometranslations.json"; 
+import translationsData from "./HomeMainTranslations.json"; 
 
 interface ReadmeSectionProps {
   language: "es" | "en";
@@ -27,8 +27,8 @@ const ReadmeSection = ({ language }: ReadmeSectionProps) => {
       </ul>
       <h2>{translations.contact}</h2>
       <p>{translations.email}: <a href="mailto:laspiurperezjuan@gmail.com">laspiurperezjuan@gmail.com</a></p>
-      <p>{translations.instagram}: <a href="https://instagram.com/jlaspiur">@jlaspiur</a></p>
-      <p>{translations.linkedin}: <a href="https://linkedin.com/in/juan-laspiur">Juan Laspiur</a></p>
+      <p>{translations.instagram}: <a href="https://instagram.com/jlaspiur" target="_blanck">@jlaspiur</a></p>
+      <p>{translations.linkedin}: <a href="https://www.linkedin.com/in/laspiurperezjuan/" target="_blanck">Juan Laspiur</a></p>
     </div>
   );
 };

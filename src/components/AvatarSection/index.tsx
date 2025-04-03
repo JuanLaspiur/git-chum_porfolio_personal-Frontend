@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"; 
-import translationsData from "../homePage/Welcome/welcometranslations.json"; 
+import translationsData from "../HomeMain/HomeMainTranslations.json"; 
 import Achievements from "./Achievements";
 import '../styles/AvatarSection.css'
 

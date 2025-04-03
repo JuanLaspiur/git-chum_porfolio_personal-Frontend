@@ -1,0 +1,99 @@
+  /* ProyectList*/
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .project-card {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+  }
+  
+  /* Modo oscuro */
+  .dark .project-card {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #333;
+  }
+  
+  /* Modo claro */
+  .light .project-card {
+    background-color: #ffffff;
+    color: black;
+    border-color: #ddd;
+  }
+  
+  .project-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3498db;
+  }
+  
+  .project-description {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  
+  .project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  
+  .project-language,
+  .project-stars,
+  .project-visibility {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .project-language {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .project-stars {
+    background-color: #f1c40f;
+    color: black;
+  }
+  
+  .project-visibility {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+
+  /* ReadmeSection */
+  .info {
+    padding: 20px 40px;
+    flex: 1;
+  }
+  
+  a {
+    color: #58a6ff;
+    text-decoration: none;
+  }
+
+  /* all */
+  .dark-theme {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .light-theme {
+    background-color: #ffffff;
+    color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .welcome-container {
+      flex-direction: column;
+    }
+  }

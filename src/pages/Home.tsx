@@ -1,5 +1,5 @@
 import Header from "../components/Header"
-import Welcome from "../components/homePage/Welcome"
+import HomeMain from "../components/HomeMain"
 import AvatarSection from "../components/AvatarSection"
 import { useLanguage } from "../context/LanguageContext";
 import '../components/styles/HomePage.css'
@@ -13,7 +13,7 @@ function Home() {
       <Header/>
       <div className={`home-container ${isDarkMode ? "dark-theme" : "light-theme"}`}>
       <AvatarSection language={language}/>
-      <Welcome/>
+      <HomeMain/>
       </div>
       </div>
   )

@@ -1,6 +1,4 @@
-import React from "react";
-import "./ProjectList.css";
-import { useTheme } from "../../../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const projects = [
   {

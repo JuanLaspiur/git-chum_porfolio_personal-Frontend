@@ -8,7 +8,7 @@ export const getMenuItems = (language: "es" | "en"): MenuItem[] => {
 
   return [
     { key: "home", icon: <HomeOutlined />, label: <NavLink to="/">{langData.home}</NavLink> },
-    { key: "projects", icon: <ProjectOutlined />, label: <NavLink to="/projects">{langData.projects}</NavLink> },
-    { key: "about", icon: <InfoCircleOutlined />, label: <NavLink to="/about">{langData.about}</NavLink> },
+    { key: "projects", icon: <ProjectOutlined />, label: <NavLink to="#">{langData.projects}</NavLink> },
+    { key: "about", icon: <InfoCircleOutlined />, label: <NavLink to="/#">{langData.about}</NavLink> },
   ];
 };

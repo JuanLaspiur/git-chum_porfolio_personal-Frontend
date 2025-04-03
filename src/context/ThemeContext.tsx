@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useState, ReactNode, useContext } from "react";
 import { ConfigProvider, theme } from "antd";
 
 interface ThemeContextProps {
@@ -32,4 +32,13 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   );
 };
 
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme debe usarse dentro de un ThemeProvider");
+  }
+  return context;
+};
+
 export default ThemeProvider;
+

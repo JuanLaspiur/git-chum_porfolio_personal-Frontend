@@ -1,46 +1,28 @@
-import { useContext, useState, useEffect } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-import { LanguageContext } from "../../context/LanguageContext";
+import {  useTheme } from "../../context/ThemeContext";
+import {  useLanguage } from "../../context/LanguageContext";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import translations from "./headerTranslations.json";
 import "../styles/Header.css";
-import ThemeToggle from "../ThemeToggle";
-import LanguageSwitcher from "../LanguageSwitcher";
+import ThemeToggle from "../ui/ThemeToggle";
+import LanguageToggle from "../ui/LanguageToggle";
 import NavMenu from "./NavMenu";
+import withResponsive from "../withResponsiveHOC";
+import { getMenuItems } from "./getNavItems";
 
-const Header: React.FC = () => {
-  const themeContext = useContext(ThemeContext);
-  const languageContext = useContext(LanguageContext);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+type HeaderProps = {
+  isMobile?: boolean;
+};
 
-  if (!themeContext || !languageContext) {
-    throw new Error("ThemeContext and LanguageContext must be used within their respective providers");
-  }
+const Header: React.FC = ({isMobile = false }:HeaderProps) => {
+  const { isDarkMode } = useTheme();
+  const { language } = useLanguage();
 
-  const { isDarkMode } = themeContext;
-  const { language } = languageContext;
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <header className={`header ${isDarkMode ? "dark-theme" : "light-theme"}`}>
-      {isMobile ? (
-        <>
-            <NavMenu isDarkMode={isDarkMode} language={language} />
-            <div className="logo">  <img src={`./${!isDarkMode ?'logo':'logo_white'}.png`} alt="logo" className="logo-icon" />MyPortfolio </div>
-        </>
-      ) : (
-        <>
-          <div className="logo">  <img src={`./${!isDarkMode ?'logo':'logo_white'}.png`} alt="logo" className="logo-icon" /> MyPortfolio</div>
-          <NavMenu isDarkMode={isDarkMode} language={language} />
-        </>
-      )}
-
+      <NavMenu isDarkMode={isDarkMode} language={language} menuData={getMenuItems(language)} />
       <div className="header-right">
         <Input
           className="search-bar"
@@ -48,10 +30,10 @@ const Header: React.FC = () => {
           prefix={<SearchOutlined />}
         />
         <ThemeToggle />
-        <LanguageSwitcher  isMobile={isMobile}/>
-      </div>
+        <LanguageToggle  isMobile={isMobile}/>
+        </div>
     </header>
   );
 };
 
-export default Header;
+export default withResponsive(Header);

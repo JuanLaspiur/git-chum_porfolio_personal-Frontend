@@ -1,5 +1,4 @@
 import { useState, JSX } from "react";
-import "./ProyectCard.css";
 
 interface Project {
   name: string;

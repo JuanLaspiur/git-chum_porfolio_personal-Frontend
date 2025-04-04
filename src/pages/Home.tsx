@@ -5,6 +5,7 @@ import { useLanguage } from "../context/LanguageContext";
 import '../components/styles/HomePage.css'
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 function Home() {
     const { language } = useLanguage();
@@ -17,6 +18,7 @@ function Home() {
       <AvatarSection language={language}/>
       <HomeMain query={query} /> 
       </div>
+      <ScrollToTopButton/>
       </div>
   )
 }

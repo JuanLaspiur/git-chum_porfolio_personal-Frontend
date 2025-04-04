@@ -1,1 +1,2 @@
-1-Optimizar Header e imagenes
+1-Imagenes con movimiento
+2-Seguidores seguidos

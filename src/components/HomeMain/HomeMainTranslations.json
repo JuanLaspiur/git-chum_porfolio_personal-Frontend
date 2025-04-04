@@ -18,7 +18,10 @@
     "workExperience": "Work Experience",
     "workedOn": "Worked on",
     "tasksProjects": "tasks/projects",
-    "keyResponsibility": "Key responsibility"
+    "keyResponsibility": "Key responsibility",
+    "followers":"followers",
+    "following":"following"
+
     
   },
   "es": {
@@ -40,6 +43,8 @@
     "workExperience": "Experiencia Laboral",
     "workedOn": "Trabajó en",
     "tasksProjects": "tareas/proyectos",
-    "keyResponsibility": "Responsabilidad clave"
+    "keyResponsibility": "Responsabilidad clave",
+     "followers":"seguidores",
+     "following":"seguidos"
   }
 }

@@ -15,7 +15,7 @@ const HomeMain = ({ query }: HomeMainProps) => {
   const { language } = useLanguage();
 
   return (
-    <div className={`welcome-container ${isDarkMode ? "dark-theme" : "light-theme"}`}>
+    <div className={`${isDarkMode ? "dark-theme" : "light-theme"}`}>
       <ReadmeSection language={language} />
       <ProjectList query={query} />
       <ContributionGraph />

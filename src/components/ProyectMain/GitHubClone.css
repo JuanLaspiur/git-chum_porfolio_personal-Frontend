@@ -1,0 +1,92 @@
+.container {
+ /* max-width: 800px; */
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.search-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.repo-card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+}
+
+.repo-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+
+.repo-title a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.repo-title a:hover {
+  text-decoration: underline;
+}
+
+.repo-description {
+  font-size: 14px;
+  color: #586069;
+  margin: 5px 0;
+}
+
+.repo-meta {
+  font-size: 12px;
+  color: #586069;
+}
+
+.repo-language {
+  margin-right: 10px;
+}
+
+.repo-stars {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* 🌙 Modo Oscuro */
+.dark {
+  background: #1e1e1e;
+  color: #e1e1e1;
+}
+
+.dark .container {
+  background: #2d2d2d;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.dark .repo-card {
+  background: #333;
+  border-color: #444;
+}
+
+.dark .search-box {
+  background: #333;
+  color: white;
+  border-color: #555;
+}
+
+.dark .repo-title a {
+  color: #58a6ff;
+}
+
+.dark .repo-description,
+.dark .repo-meta,
+.dark .repo-stars {
+  color: #c9d1d9;
+}
+

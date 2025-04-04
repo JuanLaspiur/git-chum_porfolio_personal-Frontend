@@ -98,3 +98,29 @@ h3 {
   border-radius: 50%;
   font-weight: bold;
 }
+
+.followers-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+.followers-count, .following-count {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.followers-section .dark-theme {
+  color: #ccc;
+}
+
+.followers-section .light-theme {
+  color: rgb(41, 40, 40);
+}
+
+.foll-hover:hover{
+  cursor: pointer;
+}

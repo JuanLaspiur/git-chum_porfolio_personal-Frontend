@@ -1,13 +1,13 @@
 {
     "es": {
       "home": "Inicio",
-      "about": "Acerca de",
+      "about": "Acerca de mi",
       "projects": "Proyectos",
       "search": "Buscar..."
     },
     "en": {
       "home": "Home",
-      "about": "About",
+      "about": "About me",
       "projects": "Projects",
       "search": "Search..."
     }

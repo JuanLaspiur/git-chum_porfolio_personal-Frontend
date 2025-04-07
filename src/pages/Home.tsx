@@ -1,12 +1,11 @@
 import Header from "../components/Header"
-import HomeMain from "../components/HomeMain"
+import AboutMeMain from "../components/AboutMeMain";
 import AvatarSection from "../components/AvatarSection"
 import { useLanguage } from "../context/LanguageContext";
 import '../components/styles/HomePage.css'
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import ProyectMain from "../components/ProyectMain";
 
 function Home() {
     const { language } = useLanguage();
@@ -17,7 +16,7 @@ function Home() {
       <Header setQuery={setQuery}/> 
       <div className={`home-container ${isDarkMode ? "dark-theme" : "light-theme"}`}>
       <AvatarSection language={language}/>
-      <ProyectMain  /> 
+      <AboutMeMain  /> 
       </div>
       <ScrollToTopButton/>
       </div>

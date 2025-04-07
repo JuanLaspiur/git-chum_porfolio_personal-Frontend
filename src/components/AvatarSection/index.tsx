@@ -21,6 +21,7 @@ const AvatarSection = ({ language }: AvatarSectionProps) => {
 
   return (
     <div className="avatar_section">
+      {/*  */}
       <div className="avatar_container">
         <img src="./Yo.webp" alt="Avatar" className="avatar_section-image" />
         <div className="emoji-badge" style={{background:isDarkMode? 'black':'white'}}>

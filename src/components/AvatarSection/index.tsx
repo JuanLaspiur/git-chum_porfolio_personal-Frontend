@@ -35,10 +35,17 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
       <h2>{translations.username}</h2>
       <p>{translations.job}</p>
 
-      <button  className='whatsapp_button'>
-        <UsergroupAddOutlined style={{ fontSize: "22px", color: "#25D366" }} />
-        {translations.wsapp || "WhatsApp"}
-      </button>
+      <a
+  href="https://wa.me/542914045485" // reemplaza con tu número real
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="whatsapp_button">
+    <UsergroupAddOutlined style={{ fontSize: "22px", color: "#25D366" }} />
+    {translations.wsapp || "WhatsApp"}
+  </button>
+</a>
+
 
       <div
         className={`followers-section ${isDarkMode ? "dark-mode" : "light-mode"}`}

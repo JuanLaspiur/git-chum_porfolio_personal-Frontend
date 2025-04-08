@@ -6,6 +6,7 @@ import SocialLinks from "./SocialLinks";
 import Section from "./Section";
 import { useLanguage } from "../../context/LanguageContext";
 import texts from "./aboutMeTraslations"; // Importa los textos
+import LinkedInProfile from "../LinkedInProfile";
 
 const AboutMeMain: React.FC = () => {
   const { isDarkMode } = useTheme();
@@ -15,8 +16,8 @@ const AboutMeMain: React.FC = () => {
   const t = texts[language]; 
 
   return (
-    <div className={`about-container ${isDarkMode ? "dark-mode" : "light-mode"}`}>
-      <div className="about-content">
+    <div className={`about-container ${isDarkMode ? "dark-mode" : "light-mode"}`}>      
+        <div className="about-content">
         <h1>{t.greeting} {developer.name} 👋</h1>
         <p>
           {t.aboutMe} <strong>{t.helloWorld}</strong> {t.changedMyLife}
@@ -33,7 +34,9 @@ const AboutMeMain: React.FC = () => {
 
         <h2>{t.findMe}</h2>
         <SocialLinks />
+        <LinkedInProfile/>
       </div>
+
     </div>
   );
 };

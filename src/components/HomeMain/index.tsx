@@ -15,10 +15,10 @@ const HomeMain = ({ query }: HomeMainProps) => {
   const { language } = useLanguage();
 
   return (
-    <div className={`${isDarkMode ? "dark-theme" : "light-theme"}`}>
-      <ReadmeSection language={language} />
+    <div className={`${isDarkMode ? "dark-theme" : "light-theme"}`} style={{margin:'auto', width:'80%'}}>
+      <ReadmeSection language={language} /> 
       <ProjectList query={query} />
-      <ContributionGraph />
+         <ContributionGraph />
       <GitHubActivity/>
     </div>
   );

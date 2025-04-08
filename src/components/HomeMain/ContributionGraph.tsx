@@ -15,12 +15,14 @@ const ContributionGraph = () => {
   return (
     <div style={containerStyle}>
       <h2 style={{ textAlign: "center", paddingBottom:"20px" }}><Logo className="" isDarkMode={isDarkMode} text=""/> GitChum Contributions</h2>
+     <div style={{ width:'max-content',margin: "auto"}}>
       <GitHubCalendar
         username="JuanLaspiur"
         blockSize={12}
         blockMargin={5}
         colorScheme={isDarkMode ? "dark" : "light"} 
       />
+      </div>
     </div>
   );
 };

@@ -1,33 +1,35 @@
   /* ProyectList*/
   .project-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 16px;
     padding: 16px;
   }
   
-  .project-card {
+  .project-card_list
+ {
     position: relative;
+    width: 100%;
     padding: 16px;
     border-radius: 8px;
     border: 1px solid;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    
   }
   
 
   /* Modo oscuro */
-  .dark .project-card {
+  .dark .project-card_list
+ {
     background-color: #1e1e1e;
     color: white;
     border-color: #333;
   }
   
   /* Modo claro */
-  .light .project-card {
+  .light .project-card_list
+ {
     background-color: #ffffff;
     color: black;
     border-color: #ddd;
@@ -90,7 +92,8 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
   
-  .project-card:hover .preview-overlay {
+  .project-card_list
+:hover .preview-overlay {
     opacity: 1;
     transform: scale(1);
   }

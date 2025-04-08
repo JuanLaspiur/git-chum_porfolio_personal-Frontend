@@ -28,7 +28,7 @@ export interface Developer {
         "Function as Child (FaCC)",
       ],
       designPatterns: ["MVC", "Factory", "Observer", "Singleton"],
-      deployment: ["SSH", "VPN", "AWS EC2", "S3", "Lambda", "CloudFront"],
+      deployment: ["SSH", "VPN", "AWS EC2", "S3", "NGINX", "CloudFront"],
     },
     additionalKnowledge: ["Next.js", "Java", "SQL"],
     passion: "Building scalable web & mobile apps 🚀",

@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import withResponsive from "../withResponsiveHOC";
@@ -10,26 +10,45 @@ type NavMenuProps = {
   language: "es" | "en";
   menuData: MenuItem[];
   isMobile?: boolean;
-
+  setPage: (page: "home" | "aboutMe" | "proyects") => void;
 };
 
+const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, isMobile, menuData, setPage }) => {
+  const handleChangePage = (page: "home" | "aboutMe" | "proyects") => {
+    setPage(page);
+  };
 
-const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, isMobile, menuData }) => {
   return (
     <>
       {isMobile ? (
-        <MobileMenuDrawer isDarkMode={isDarkMode} menuData={menuData} />
+        <MobileMenuDrawer
+          isDarkMode={isDarkMode}
+          menuData={menuData}
+          handleChangePage={handleChangePage}
+        />
       ) : (
         <>
           <Logo isDarkMode={isDarkMode} />
-          <Menu mode="horizontal" theme={isDarkMode ? "dark" : "light"} className="nav-menu" items={menuData} />
+          <Menu
+            mode="horizontal"
+            theme={isDarkMode ? "dark" : "light"}
+            className="nav-menu"
+            items={menuData.map((item) => ({
+              ...item,
+              onClick: () => handleChangePage(item.key as "home" | "aboutMe" | "proyects"),
+            }))}
+          />
         </>
       )}
     </>
   );
 };
 
-const MobileMenuDrawer: React.FC<{ isDarkMode: boolean; menuData: MenuItem[] }> = ({ isDarkMode, menuData }) => {
+const MobileMenuDrawer: React.FC<{
+  isDarkMode: boolean;
+  menuData: MenuItem[];
+  handleChangePage: (page: "home" | "aboutMe" | "proyects") => void;
+}> = ({ isDarkMode, menuData, handleChangePage }) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
 
   return (
@@ -47,14 +66,19 @@ const MobileMenuDrawer: React.FC<{ isDarkMode: boolean; menuData: MenuItem[] }> 
         open={drawerVisible}
         styles={{ body: { padding: 0 } }}
       >
-        <Menu mode="vertical" theme={isDarkMode ? "dark" : "light"} onClick={() => setDrawerVisible(false)} items={menuData} />
+        <Menu
+          mode="vertical"
+          theme={isDarkMode ? "dark" : "light"}
+          onClick={(e) => {
+            handleChangePage(e.key as "home" | "aboutMe" | "proyects");
+            setDrawerVisible(false);
+          }}
+          items={menuData}
+        />
       </Drawer>
       <Logo isDarkMode={isDarkMode} />
     </>
   );
 };
-
-
-
 
 export default withResponsive(NavMenu);

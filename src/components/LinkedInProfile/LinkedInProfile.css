@@ -1,0 +1,112 @@
+.profile-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .header_LinkedInProfile {
+    background-color: #0070B3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+  }
+  
+  .header_LinkedInProfile h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .header_LinkedInProfile p {
+    margin: 5px 0 0;
+    font-size: 16px;
+  }
+  
+  /* Imagen en la parte inferior derecha */
+  .linkechum-logo {
+    left: 10px;
+    bottom: 5px;
+    width: 100px;
+    height: auto;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .avatar {
+    margin-right: 20px;
+    max-width: 120px;
+    width: 100%;
+  }
+  
+  .details {
+    flex: 1;
+  }
+  
+  .details h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .buttons {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .job-search {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eef3f8;
+    border-radius: 5px;
+    color: #555;
+  }
+  
+  .url-section {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #0077B5;
+    display: flex;
+    align-items: center;
+  }
+  
+  .url-section svg {
+    margin-right: 5px;
+  }
+  
+  /* Responsividad para móviles */
+  @media (max-width: 600px) {
+    .profile-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .avatar {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  
+    .buttons {
+      justify-content: center;
+    }
+  }
+  

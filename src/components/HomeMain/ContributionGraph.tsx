@@ -15,8 +15,9 @@ const ContributionGraph = () => {
   return (
     <div style={containerStyle}>
       <h2 style={{ textAlign: "center", paddingBottom:"20px" }}><Logo className="" isDarkMode={isDarkMode} text=""/> GitChum Contributions</h2>
-     <div style={{ width:'100%',margin: "auto"}}>
+     <div style={{ width:'100%'}}>
       <GitHubCalendar
+      style={{margin:'auto'}}
         username="JuanLaspiur"
         blockSize={12}
         blockMargin={5}

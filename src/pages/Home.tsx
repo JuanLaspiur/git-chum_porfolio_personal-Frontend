@@ -8,6 +8,7 @@ import { useState } from "react";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import ProyectMain from "../components/ProyectMain";
 import HomeMain from "../components/HomeMain";
+import FollowersList from "../components/FollowersMain";
 
 function Home() {
   const { language } = useLanguage();
@@ -19,10 +20,13 @@ function Home() {
     <div>
       <Header setQuery={setQuery} setPage={setPage} />
       <div className={`home-container ${isDarkMode ? "dark-theme" : "light-theme"}`}>
-        <AvatarSection language={language} />    
+        <AvatarSection language={language} setPage={setPage} />   
+        
         {page === "home" && <HomeMain query={query} />}
         {page === "aboutMe" && <AboutMeMain />}
         {page === "proyects" && <ProyectMain />}
+        {(page === "following" || page === "followers") &&   <FollowersList/>}
+      
       </div>   
   
       <ScrollToTopButton />

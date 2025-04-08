@@ -10,11 +10,11 @@ type NavMenuProps = {
   language: "es" | "en";
   menuData: MenuItem[];
   isMobile?: boolean;
-  setPage: (page: "home" | "aboutMe" | "proyects") => void;
+  setPage: (page: string) => void;
 };
 
 const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, isMobile, menuData, setPage }) => {
-  const handleChangePage = (page: "home" | "aboutMe" | "proyects") => {
+  const handleChangePage = (page: string) => {
     setPage(page);
   };
 
@@ -29,6 +29,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, isMobile, menuData, setPa
       ) : (
         <>
           <Logo isDarkMode={isDarkMode} />
+          {/* No quiero que se ponga todo azule l boton cuando se selecciona sino solo una linea abajo */}
           <Menu
             mode="horizontal"
             theme={isDarkMode ? "dark" : "light"}

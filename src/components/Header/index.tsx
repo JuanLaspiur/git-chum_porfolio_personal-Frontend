@@ -13,7 +13,7 @@ import { getMenuItems } from "./getNavItems";
 type HeaderProps = {
   isMobile?: boolean;
   setQuery: (query: string) => void; 
-  setPage:(page:'home' | 'aboutMe' | 'proyects')=>void;
+  setPage:(page:string)=>void;
 };
 
 function Header({ isMobile = false, setQuery, setPage }: HeaderProps) {

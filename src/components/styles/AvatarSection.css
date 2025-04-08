@@ -30,9 +30,8 @@
 
 
 
-.follow-button {
+.whatsapp_button{
   margin: auto;
-  background-color: #21262d;
   color: #25D366;
   border: none;
   padding: 10px;
@@ -43,7 +42,16 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  background-color: #11111100;
 }
+.follow-button .dark-mode{
+background-color: #1d1c1c !important;
+}
+.follow-button .light-mode{
+  background-color: #ccc;
+}
+
+
 
 .achievements {
   margin-top: 35px;

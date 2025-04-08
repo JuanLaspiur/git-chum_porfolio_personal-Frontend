@@ -21,11 +21,11 @@ const ReadmeSection = ({ language }: ReadmeSectionProps) => {
       </div>
       <h1>👋 {translations.name} - {translations.personalPage}</h1>
       <a
-        href="https://personal-webpage-frontend.vercel.app/"
+        href="https://spartusdevs.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        https://personal-webpage-frontend.vercel.app/
+        https://spartusdevs.netlify.app/
       </a>
       <hr className="divider" />
       <h2>{translations.skills}</h2>

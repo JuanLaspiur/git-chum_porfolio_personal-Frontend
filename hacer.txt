@@ -1,2 +1,2 @@
-1-Imagenes con movimiento
-2-Seguidores seguidos
+1- Boton Whats app cambien con el isDarkTheme y redirija a mi whats app.
+2- 

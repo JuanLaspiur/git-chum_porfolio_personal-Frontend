@@ -20,7 +20,7 @@ const ContributionGraph = () => {
         username="JuanLaspiur"
         blockSize={12}
         blockMargin={5}
-        colorScheme={isDarkMode ? "dark" : "light"} 
+        colorScheme={isDarkMode ? "dark" : "light"} // quiero que el fondo sea blanco cuando isDarkMode es false, no gris
       />
       </div>
     </div>

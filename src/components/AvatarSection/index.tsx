@@ -31,12 +31,11 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
           😊
         </div>
       </div>
-
       <h1>{translations.name}</h1>
       <h2>{translations.username}</h2>
       <p>{translations.job}</p>
 
-      <button className="follow-button">
+      <button  className='whatsapp_button'>
         <UsergroupAddOutlined style={{ fontSize: "22px", color: "#25D366" }} />
         {translations.wsapp || "WhatsApp"}
       </button>

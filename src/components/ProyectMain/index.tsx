@@ -1,3 +1,4 @@
+import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
 import "./GitHubClone.css";
 import ProjectGallery from "./ProjectGallery";
@@ -14,7 +15,7 @@ const repositories = [
 
 const ProyectMain = () => {
   const { isDarkMode } = useTheme();
-
+  const {language} =useLanguage();
   return (
     <div className={`container ${isDarkMode ? "dark" : ""}`}>
       <input type="text" placeholder="Find a repository..." className="search-box" />
@@ -22,7 +23,7 @@ const ProyectMain = () => {
         {repositories.map((repo, index) => (
           <div key={index} className="repo-card">
             <h2 className="repo-title">
-               { repo.name
+               {language ==='es' ?  repo.name : 'git-chum_porfolio_Some-public-projects'
               }
             </h2>
             <p className="repo-description">{repo.description}</p>

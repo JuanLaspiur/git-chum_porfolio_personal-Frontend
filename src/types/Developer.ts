@@ -15,7 +15,7 @@ export interface Developer {
   export const developer: Developer = {
     name: "Juan Laspiur",
     role: "Full Stack Developer",
-    skills: ["React", "React Native", "Node.js", "MongoDB", "TypeScript"],
+    skills: ["React", "React Native", "Next.js","Node.js", "MongoDB", "TypeScript"],
     expertise: {
       architectures: ["Microservices", "Monolithic", "Serverless"],
       reactDesingPatterns: [

@@ -86,6 +86,7 @@ const ProjectGallery: React.FC<ProjectGalleryProps> = ({ isDarkMode }) => {
             loop
             muted
             playsInline
+            preload="metadata"
           >
             Tu navegador no soporta el video HTML5.
           </video>

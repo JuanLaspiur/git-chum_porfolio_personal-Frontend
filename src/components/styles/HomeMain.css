@@ -166,6 +166,7 @@
     }
     .project-list {
       grid-template-columns: repeat(1, minmax(300px, 1fr));
+      padding: 16px 0;
     }
 
     .info {

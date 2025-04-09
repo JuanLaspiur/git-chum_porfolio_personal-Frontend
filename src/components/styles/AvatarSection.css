@@ -132,3 +132,47 @@ h3 {
 .foll-hover:hover{
   cursor: pointer;
 }
+
+/* Imagen más pequeña en versión móvil */
+.avatar-mobile {
+  width: 140px;
+  height: 140px;
+}
+
+/* Contenedor general más compacto para móviles */
+@media (max-width: 768px) {
+  .avatar_section {
+    padding: 20px 10px;
+    border-right: none;
+    display: flex;
+  }
+
+  .avatar_section-image{
+    width: 110px;
+    height: 110px;
+  }
+
+  h1,.desapear {display: none;}
+
+  .emoji-badge {
+    display: none;
+    bottom: 10px;
+    right: 10px;
+  }
+  .whatsapp_button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .achievement-list {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .achievement-item img {
+    width: 50px;
+    height: 50px;
+  }
+}

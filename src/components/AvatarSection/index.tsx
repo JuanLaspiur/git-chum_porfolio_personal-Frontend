@@ -22,6 +22,7 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
 
   return (
     <div className="avatar_section">
+
       <div className="avatar_container">
         <img src="./Yo.webp" alt="Avatar" className="avatar_section-image" />
         <div
@@ -31,10 +32,10 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
           😊
         </div>
       </div>
+      <div>
       <h1>{translations.name}</h1>
       <h2>{translations.username}</h2>
-      <p>{translations.job}</p>
-
+      <p>{translations.job}</p>   
       <a
   href="https://wa.me/542914045485" // reemplaza con tu número real
   target="_blank"
@@ -44,10 +45,7 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
     <UsergroupAddOutlined style={{ fontSize: "22px", color: "#25D366" }} />
     {translations.wsapp || "WhatsApp"}
   </button>
-</a>
-
-
-      <div
+</a>      <div
         className={`followers-section ${isDarkMode ? "dark-mode" : "light-mode"}`}
       >
         <UsergroupAddOutlined className="followers-icon" />
@@ -72,6 +70,11 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
       </div>
 
       <Achievements />
+</div>
+   
+
+
+
     </div>
   );
 };

@@ -57,6 +57,15 @@ const ReadmeSection = ({ language }: ReadmeSectionProps) => {
           Juan Laspiur
         </a>
       </p>
+      <p>
+        GitHub:{" "}
+        <a
+          href="https://github.com/JuanLaspiur"
+          target="_blank"
+        >
+          https://github.com/JuanLaspiur
+        </a>
+      </p>
     </div>
   );
 };

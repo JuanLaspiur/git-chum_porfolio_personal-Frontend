@@ -87,4 +87,7 @@
   .search-bar {
    display: none;
   }
+  .nav-menu {
+    margin: 0 auto;
+  }
 }

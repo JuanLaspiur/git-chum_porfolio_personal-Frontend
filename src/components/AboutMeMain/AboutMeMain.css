@@ -67,3 +67,11 @@
   .social-links a:hover {
     color: #1f6feb;
   }
+
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 40px 10px;
+    }
+    h2{
+    font-size: 1.3rem;
+  }}

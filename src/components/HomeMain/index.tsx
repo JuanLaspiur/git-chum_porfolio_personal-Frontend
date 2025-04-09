@@ -17,7 +17,7 @@ const HomeMain = ({isMobile = false, query }: HomeMainProps) => {
   const { language } = useLanguage();
 
   return (
-    <div className={`${isDarkMode ? "dark-theme" : "light-theme"}`} style={{margin:'auto', width:isMobile ?'80%' :'100%'}}>
+    <div className={`${isDarkMode ? "dark-theme" : "light-theme"}`} style={{margin:'auto', width:isMobile ?'95%' :'80%'}}>
       <ReadmeSection language={language} /> 
       <ProjectList query={query} />
       <ContributionGraph />

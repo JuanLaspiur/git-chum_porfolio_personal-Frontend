@@ -32,7 +32,7 @@ const projects: Project[] = [
   },
   {
     name: "Cooperar - Aplicación de escritura",
-    video: "/video/trafinktu.mp4",
+    video: "/video/trafinktu.webm",
     description: {
       es: "App colaborativa móvil desarrollada con Expo",
       en: "Collaborative mobile app built with Expo",
@@ -41,7 +41,7 @@ const projects: Project[] = [
   },
   {
     name: "SpartusDev - Aplicación Portafolio",
-    video: "/video/spartus_dev.mp4",
+    video: "/video/spartus_dev.webm",
     description: {
       es: "Portafolio web construido con React",
       en: "Web portfolio built with React",
@@ -50,7 +50,7 @@ const projects: Project[] = [
   },
   {
     name: "TagList - Prueba Técnica",
-    video: "/video/tag_list.mp4",
+    video: "/video/tag_list.webm",
     description: {
       es: "Aplicación SSR con Next.js",
       en: "SSR App with Next.js",

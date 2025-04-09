@@ -1,5 +1,5 @@
 import "./LinkedInProfile.css";
-import { Avatar, Button } from "antd";
+import { Avatar } from "antd";
 import { LinkedinOutlined } from "@ant-design/icons";
 
 const LinkedInProfile = () => {
@@ -10,7 +10,7 @@ const LinkedInProfile = () => {
       </div>
 
       <div className="profile-info">
-        <Avatar size={120} src="./Yo.webp" className="avatar" />
+        <Avatar size={120} src="./yo_linkedin_original.webp" className="avatar" />
         <div className="details">
           <h2>Juan Laspiur</h2>
           <p>
@@ -19,12 +19,7 @@ const LinkedInProfile = () => {
           </p>
           <p>Bahía Blanca, Provincia de Buenos Aires, Argentina</p>
           <p>6739 seguidores • Más de 500 contactos</p>
-          <div className="buttons">
-            <Button type="primary">Tengo interés en...</Button>
-            <Button>Mejorar perfil</Button>
-            <Button>Recursos</Button>
-          </div>
-        </div>
+                </div>
       </div>
 
       <div className="job-search">

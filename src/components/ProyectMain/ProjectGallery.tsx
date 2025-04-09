@@ -14,7 +14,7 @@ interface Project {
 const projects: Project[] = [
   {
     name: "Blog María",
-    video: "/video/Blog_maria.mp4",
+    video: "/video/Blog_maria.webm",
     description: {
       es: "Blog con Bootstrap y JavaScript Vanilla",
       en: "Blog built with Bootstrap and Vanilla JavaScript",
@@ -23,7 +23,7 @@ const projects: Project[] = [
   },
   {
     name: "Magic Red Social",
-    video: "/video/magic_day.mp4",
+    video: "/video/magic_day.webm",
     description: {
       es: "Aplicación móvil con React Native y Expo",
       en: "Mobile app with React Native and Expo",
@@ -59,7 +59,7 @@ const projects: Project[] = [
   },
   {
     name: "RedSocial - Aplicación Portafolio",
-    video: "/video/red_social.mp4",
+    video: "/video/red_social.webm",
     description: {
       es: "App multiplataforma con Ionic",
       en: "Cross-platform app built with Ionic",

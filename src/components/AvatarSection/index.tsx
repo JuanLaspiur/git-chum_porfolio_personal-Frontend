@@ -4,17 +4,18 @@ import translationsData from "../HomeMain/HomeMainTranslations.json";
 import Achievements from "./Achievements";
 import "../styles/AvatarSection.css";
 import { useTheme } from "../../context/ThemeContext";
+import { usePage } from "../../context/PageContext";
 
 interface AvatarSectionProps {
   language: "es" | "en";
-  setPage: (page: string) => void;
 }
 
-const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
+const AvatarSection = ({ language }: AvatarSectionProps) => {
   const [translations, setTranslations] = useState(
     translationsData[language] || translationsData["en"]
   );
   const { isDarkMode } = useTheme();
+  const { handleChangePage } = usePage();
 
   useEffect(() => {
     setTranslations(translationsData[language] || translationsData["en"]);
@@ -53,7 +54,7 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
         <span className="followers-count">7</span>
         <p
           className="foll-hover"
-          onClick={() => setPage("followers")}
+          onClick={() => handleChangePage("followers")}
           style={{ cursor: "pointer" }}
         >
           {translations.followers}
@@ -62,7 +63,7 @@ const AvatarSection = ({ language, setPage }: AvatarSectionProps) => {
         <span className="following-count">26</span>
         <p
           className="foll-hover"
-          onClick={() => setPage("following")}
+          onClick={() => handleChangePage("following")}
           style={{ cursor: "pointer" }}
         >
           {translations.following}

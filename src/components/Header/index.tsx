@@ -13,16 +13,15 @@ import { getMenuItems } from "./getNavItems";
 type HeaderProps = {
   isMobile?: boolean;
   setQuery: (query: string) => void; 
-  setPage:(page:string)=>void;
 };
 
-function Header({ isMobile = false, setQuery, setPage }: HeaderProps) {
+function Header({ isMobile = false, setQuery }: HeaderProps) {
   const { isDarkMode } = useTheme();
   const { language } = useLanguage();
 
   return (
     <header className={`header ${isDarkMode ? "dark-theme" : "light-theme"}`}>
-      <NavMenu setPage={setPage} isDarkMode={isDarkMode} language={language} menuData={getMenuItems(language)} />
+      <NavMenu  isDarkMode={isDarkMode} language={language} menuData={getMenuItems(language)} />
       <div className="header-right">
         <Input
           className="search-bar"

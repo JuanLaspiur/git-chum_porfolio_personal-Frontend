@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from "./pages/Home"
 import ThemeProvider from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
+import { PageProvider } from './context/PageContext';
 
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
     <div>
      <ThemeProvider>
       <LanguageProvider>
-      <RouterProvider router={router} />
+        <PageProvider>
+         <RouterProvider router={router} />
+        </PageProvider>
       </LanguageProvider>
      </ThemeProvider>
     </div>

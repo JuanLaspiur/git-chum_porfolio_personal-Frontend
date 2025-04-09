@@ -4,20 +4,17 @@ import { MenuOutlined } from "@ant-design/icons";
 import withResponsive from "../withResponsiveHOC";
 import { Logo } from "../ui/Logo";
 import { MenuItem } from "../../types/MenuItem";
+import { usePage } from "../../context/PageContext";
 
 type NavMenuProps = {
   isDarkMode: boolean;
   language: "es" | "en";
   menuData: MenuItem[];
   isMobile?: boolean;
-  setPage: (page: string) => void;
 };
 
-const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, isMobile, menuData, setPage }) => {
-  const handleChangePage = (page: string) => {
-    setPage(page);
-  };
-
+const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, isMobile, menuData }) => {
+const {handleChangePage}= usePage();
   return (
     <>
       {isMobile ? (
@@ -29,7 +26,6 @@ const NavMenu: React.FC<NavMenuProps> = ({ isDarkMode, isMobile, menuData, setPa
       ) : (
         <>
           <Logo isDarkMode={isDarkMode} />
-          {/* No quiero que se ponga todo azule l boton cuando se selecciona sino solo una linea abajo */}
           <Menu
             mode="horizontal"
             theme={isDarkMode ? "dark" : "light"}

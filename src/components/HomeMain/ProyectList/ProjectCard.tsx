@@ -1,4 +1,5 @@
 import { useState, JSX } from "react";
+import { usePage } from "../../../context/PageContext";
 
 interface Project {
   name: string;
@@ -16,12 +17,16 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, renderPreview }) => {
   const [isHovered, setIsHovered] = useState(false);
+    const { handleChangePage } = usePage()
+  
 
   return (
     <div 
       className="project-card_list"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      style={{cursor:'pointer'}}
+      onClick={()=>{handleChangePage('proyects')}}
     >
       <h2 className="project-title">{project.name}</h2>
       <p className="project-description">{project.description}</p>
